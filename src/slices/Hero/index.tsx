@@ -34,16 +34,16 @@ export default function Hero({ slice }: HeroProps): JSX.Element {
           />
           {slice.items.length > 0 ? (
             <ul className="flex flex-wrap gap-4">
-              {/* {slice.items.map((item) => (
-                // <li key={item.button_label}>
-                //   <PrismicNextLink
-                //     field={item.button_link}
-                //     className="inline-block rounded bg-white px-5 py-3 font-medium text-black"
-                //   >
-                //     {item.button_label}
-                //   </PrismicNextLink>
-                // </li>
-              ))} */}
+              {slice.items.map((item) => (
+                <li key={item.button_label}>
+                  <PrismicNextLink
+                    field={item.button_link}
+                    className="inline-block rounded bg-white px-5 py-3 font-medium text-black"
+                  >
+                    {item.button_label}
+                  </PrismicNextLink>
+                </li>
+              ))}
             </ul>
           ) : null}
         </div>

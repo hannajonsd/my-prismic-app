@@ -12,6 +12,15 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text",
+            "placeholder": "Text displayed adjacent to image",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading1,heading3,strong,em"
+          }
+        },
         "image": {
           "type": "Image",
           "config": {
@@ -19,35 +28,26 @@
             "constraint": {},
             "thumbnails": []
           }
-        },
-        "label": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Label",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "link": {
+        }
+      },
+      "items": {
+        "button_link": {
           "type": "Link",
           "config": {
-            "label": "Link",
-            "placeholder": "",
+            "label": "Button Link",
+            "placeholder": "Link for the button",
+            "allowTargetBlank": true,
             "select": null
           }
         },
-        "text": {
-          "type": "StructuredText",
+        "button_label": {
+          "type": "Text",
           "config": {
-            "label": "Text",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "label": "Button Label",
+            "placeholder": "Label for the button"
           }
         }
-      },
-      "items": {}
+      }
     }
   ]
 }
