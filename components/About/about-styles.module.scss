@@ -1,0 +1,19 @@
+.header {
+    font-size: 10px;
+    background: rgb(69, 1, 69);
+    padding: 15px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+
+    text {
+        font-size: 15px;
+        color: white;
+    }
+
+    h2 {
+        font-size: 45px;
+        color: white;
+    }
+}

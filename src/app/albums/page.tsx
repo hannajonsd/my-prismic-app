@@ -6,19 +6,18 @@ import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
-import { Album } from "../../../components/Album";
+import { Album } from "./.../../../../../components/Album/Album";
 
 type Params = { uid: string };
 
 
 export default async function AlbumPage({ params }: { params: Params }) {
-  //console.log(params.uid)
+
   const client = createClient();
   const page = await client
     .getByUID("page", "albums")
     .catch(() => notFound());
 
-  // console.log(page.data.slices)
 
   // for (const slice of page.data.slices) {
   //   if ('image' in slice.primary) {
@@ -30,7 +29,6 @@ export default async function AlbumPage({ params }: { params: Params }) {
   // }
 
   return <div>
-  {/* <SliceZone slices={page.data.slices} components={components}/> */}
           {page.data.slices.map((slice, index) => {
           if ('image' in slice.primary) {
             const plainText = asText(slice.primary.text); 

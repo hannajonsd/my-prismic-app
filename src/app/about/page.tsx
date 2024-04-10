@@ -6,16 +6,28 @@ import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
+import { About } from "../../../components/About/About";
 
 type Params = { uid: string };
 
 
 export default async function AboutPage({ params }: { params: Params }) {
-    console.log(params.uid)
   const client = createClient();
   const page = await client
     .getByUID("page", "about")
     .catch(() => notFound());
 
-  return <SliceZone slices={page.data.slices} components={components} />;
+  return <div>
+        {page.data.slices.map((slice, index) => {
+            const plainText = asText(slice.primary.text); 
+            return (
+              <About
+                key={index}
+                text={plainText}
+              />
+            );
+          return null;
+        })}
+    </div>
+  ;
 }

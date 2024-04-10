@@ -7,11 +7,8 @@ import Link from "next/link";
 import { asText } from "@prismicio/client";
 import { PrismicText } from "@prismicio/react";
 import { PrismicNextLink } from "@prismicio/next";
-
 import { createClient, repositoryName } from "@/prismicio";
-
 import { PrismicPreview } from "@prismicio/next";
-
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();

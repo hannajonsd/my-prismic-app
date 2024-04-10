@@ -1,0 +1,22 @@
+.header {
+    font-size: 10px;
+    background: rgb(69, 1, 69);
+}
+
+.text {
+    font-size: 20px;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    display: grid;
+    justify-content: center;
+    border-radius: 60%;
+}
+
+.img {
+    height: 50%;
+    width: 50%;
+    margin: 10px auto;
+    display: grid;
+    justify-content: center;
+    border-radius: 60%;
+}
