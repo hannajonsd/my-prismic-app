@@ -3,6 +3,7 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import styles from "./hero-styles.module.css";
 
 /**
  * Props for `Hero`.
@@ -14,8 +15,8 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  */
 export default function Hero({ slice }: HeroProps): JSX.Element {
   return (
-    <section className="bg-slate-900 px-6 py-28 text-slate-300 md:px-10">
-      <div className="mx-auto grid w-full max-w-5xl items-center gap-12 md:grid-cols-2 md:gap-20">
+    <section className={'${styles.heroContainer} bg-slate-900 px-6 py-28 text-slate-300 md:px-10'}>
+      <div className={'${styles.heroContent} "mx-auto grid w-full max-w-5xl items-center gap-12 md:grid-cols-2 md:gap-20'}>
         <div className="grid gap-6">
           <PrismicRichText
             field={slice.primary.text}
