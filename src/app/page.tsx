@@ -7,8 +7,6 @@ import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import { Home } from "../../components/Home/Home";
 
-
-
 // export async function generateMetadata() {
 //   const client = createClient();
 //   const page = await client.getSingle("homepage");
@@ -35,6 +33,7 @@ export default async function HomePage() {
         return (
           <Home
             key={index}
+            // @ts-ignore
             picture={slice.primary.image?.url}
             text={plainText}
           />

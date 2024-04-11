@@ -12,8 +12,17 @@
         color: white;
     }
 
-    h2 {
+    .h2 {
         font-size: 45px;
         color: white;
     }
+
+}
+
+.img {
+    height: 85%;
+    width: 85%;
+    display: grid;
+    justify-self: center;
+    border-radius: 20%;
 }

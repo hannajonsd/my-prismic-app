@@ -35,6 +35,7 @@ export default async function AlbumPage({ params }: { params: Params }) {
               <Album
                 key={index}
                 text={plainText}
+                // @ts-ignore
                 picture={slice.primary.image?.url}
               />
             );

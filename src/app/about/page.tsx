@@ -24,9 +24,10 @@ export default async function AboutPage({ params }: { params: Params }) {
               <About
                 key={index}
                 text={plainText}
+                // @ts-ignore
+                picture={slice.primary.image?.url}
               />
             );
-          return null;
         })}
     </div>
   ;
