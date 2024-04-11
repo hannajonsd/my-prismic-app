@@ -30,18 +30,15 @@ export default async function AlbumPage({ params }: { params: Params }) {
 
   return <div>
           {page.data.slices.map((slice, index) => {
-          if ('image' in slice.primary) {
             const plainText = asText(slice.primary.text); 
             return (
               <Album
                 key={index}
                 text={plainText}
-                picture={slice.primary.image.url}
-                alt={slice.primary.image.alt || 'image of album'}
+                picture={slice.primary.image?.url}
               />
             );
-          }
-          return null;
+        
         })}
   </div>;
 }

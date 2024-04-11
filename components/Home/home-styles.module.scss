@@ -1,24 +1,26 @@
 .header {
-    font-size: 10px;
     background: rgb(69, 1, 69);
     align-items: center;
     display: flex;
-    flex-direction: column; /* Added this line to make the items stack vertically */
+    flex-direction: column;
+    overflow: auto; 
 
-    text {
-        font-size: 10px;
+    .text {
         color: white;
-        padding: 10px;
+        font-size: 25px;
+        padding: 5px;
         text-align: center;
+        text-decoration: none;
     }
+ 
+}
 
-    img {
-        height: 50%;
-        width: 50%;
-        margin: 10px auto;
-        padding: 10px;
-        display: grid;
-        justify-self: center; 
-        border-radius: 60%;
-    }
+.img {
+    height: 55%;
+    width: 55%;
+    margin: 10px auto;
+    padding: 10px;
+    display: grid;
+    justify-self: center;
+    border-radius: 60%;
 }

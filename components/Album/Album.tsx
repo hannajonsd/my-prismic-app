@@ -1,11 +1,11 @@
 import React from 'react';
 import s from './album-styles.module.scss';
 
-export function Album({ text, picture, alt }: { text: string, picture: any, alt: string}) {
+export function Album({ text, picture }: { text: string, picture?: any}) {
     return (
         <div className={s.header}>
-            <h1 className={s.text}>{text}</h1>
-            <img src={picture} alt={'image of album'} className={s.img}></img>
+            <p className={s.text}>{text}</p>
+            {picture && <img src={picture} alt={'image of album'} className={s.img} />}
         </div>
     );
 }

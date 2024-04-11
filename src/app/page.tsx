@@ -22,21 +22,24 @@ import { Home } from "../../components/Home/Home";
 export default async function HomePage() {
   const client = createClient();
   const page = await client.getSingle("homepage");
+
+
+  // for (const slice of page.data.slices) {
+  //     console.log(slice.primary.text);
+  // }
   
-  return <div>
-    {page.data.slices.map((slice, index) => {
-      if ('image' in slice.primary) {
+  return (
+    <div>
+      {page.data.slices.map((slice, index) => {
         const plainText = asText(slice.primary.text); 
         return (
           <Home
             key={index}
-            picture={slice.primary.image.url}
+            picture={slice.primary.image?.url}
             text={plainText}
           />
         );
-      }
-      return null;
-    })}
+      })}
     </div>
-  ;
+  );
 }
