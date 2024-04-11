@@ -26,11 +26,11 @@ html {
 .header .text {
   font-size: 20px;
   color: var(--text-color);
-  padding-right: 10px;
 }
 .header .title {
   font-size: 20px;
-  padding: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
   color: var(--text-color);
   text-decoration: none;
 }
@@ -87,7 +87,7 @@ html {
 }
 
 .footer {
-  position: fixed;
+  position: relative;
   width: 100%;
   display: grid;
   justify-content: center;
