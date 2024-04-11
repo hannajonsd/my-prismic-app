@@ -2,11 +2,15 @@
 
 import { notFound } from "next/navigation";
 import { asText } from "@prismicio/client";
-import { SliceZone } from "@prismicio/react";
+import { PrismicText, SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
-import { Album } from "./.../../../../../components/Album/Album";
+import { Album } from "../../../components/Album/Album";
+import Link from "next/link";
+
+import s from '../../../components/Album/album-styles.module.scss';
+
 
 type Params = { uid: string };
 
@@ -29,6 +33,9 @@ export default async function AlbumPage({ params }: { params: Params }) {
   // }
 
   return <div>
+       <Link href="/albums" className={s.home}>
+            <PrismicText field={page.data.title} />
+        </Link>
           {page.data.slices.map((slice, index) => {
             const plainText = asText(slice.primary.text); 
             return (

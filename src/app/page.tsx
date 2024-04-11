@@ -1,11 +1,14 @@
 // src/app/page.tsx
 
 import { asText } from "@prismicio/client";
-import { SliceZone } from "@prismicio/react";
+import { PrismicText, SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import { Home } from "../../components/Home/Home";
+import Link from "next/link";
+
+import s from '../../components/Home/home-styles.module.scss';
 
 // export async function generateMetadata() {
 //   const client = createClient();
@@ -28,6 +31,9 @@ export default async function HomePage() {
   
   return (
     <div>
+      <Link href="/home" className={s.home}>
+        <PrismicText field={page.data.title} />
+      </Link>
       {page.data.slices.map((slice, index) => {
         const plainText = asText(slice.primary.text); 
         return (

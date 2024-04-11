@@ -1,7 +1,7 @@
 .header {
     font-size: 10px;
     background: rgb(69, 1, 69);
-    padding: 15px;
+    padding: 5px;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -12,17 +12,33 @@
         color: white;
     }
 
-    .h2 {
-        font-size: 45px;
+    .title {
+        font-size: 20px;
+        padding: 5px;
         color: white;
+        text-decoration: none;
+    }
+    
+    .img {
+        height: 85%;
+        width: 85%;
+        display: grid;
+        justify-self: center;
+        border-radius: 20%;
     }
 
 }
 
-.img {
-    height: 85%;
-    width: 85%;
-    display: grid;
-    justify-self: center;
-    border-radius: 20%;
+.home {
+    font-size: 35px;
+    color: white;
+    background-color: rgb(69, 1, 69);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
 }
+
+
