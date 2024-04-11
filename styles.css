@@ -26,6 +26,7 @@ html {
 .header .text {
   font-size: 20px;
   color: var(--text-color);
+  padding-right: 10px;
 }
 .header .title {
   font-size: 20px;
@@ -86,14 +87,14 @@ html {
 }
 
 .footer {
-  position: relative;
+  position: fixed;
   width: 100%;
   display: grid;
   justify-content: center;
   align-items: center;
   background: var(--primary-color);
   padding: 15px;
-  color: rgb(236, 78, 230);
+  color: var(--link-color);
 }
 
 .header {
@@ -127,7 +128,7 @@ html {
   align-items: center;
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  overflow-y: scroll;
 }
 .header .text {
   color: var(--text-color);
@@ -179,6 +180,7 @@ html {
   --card-border-rgb: $card-border-rgb;
   --primary-color: rgb(69, 1, 69);
   --text-color: rgb(242, 236, 216);
+  --link-color: rgb(236, 78, 230);
 }
 
 @media (prefers-color-scheme: dark) {
