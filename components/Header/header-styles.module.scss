@@ -1,0 +1,30 @@
+.header {
+    font-size: 10px;
+    background: rgb(69, 1, 69);
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+
+    .list {
+        font-size: 15px;
+        color: white;
+        text-decoration: underline;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        padding: 5px;
+        text-align: center;
+    }
+
+}
+
+.home {
+    font-size: 35px;
+    color: white;
+}
+
+
+

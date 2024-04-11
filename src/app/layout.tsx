@@ -9,6 +9,8 @@ import { PrismicText } from "@prismicio/react";
 import { PrismicNextLink } from "@prismicio/next";
 import { createClient, repositoryName } from "@/prismicio";
 import { PrismicPreview } from "@prismicio/next";
+import { Header } from "../../components/Header/Header";
+import { Footer } from "../../components/Footer/Footer";
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
@@ -33,44 +35,5 @@ export default async function RootLayout({
         <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>
-  );
-}
-
-async function Header() {
-  const client = createClient();
-  const settings = await client.getSingle("settings");
-
-  return (
-    <header className="bg-slate-900 p-6 text-slate-300 md:px-10">
-      <div className="mx-auto flex w-full max-w-5xl flex-col items-baseline gap-4 md:flex-row">
-        <Link href="/" className="shrink-0 text-2xl font-medium text-white">
-          <PrismicText field={settings.data.site_title} />
-        </Link>
-        <nav className="grow">
-          <ul className="flex flex-wrap gap-x-6 gap-y-4 md:justify-end md:gap-x-12">
-            {settings.data.navigation.map((item) => (
-              <li key={item.label}>
-                <PrismicNextLink field={item.link}>
-                  {item.label}
-                </PrismicNextLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-    </header>
-  );
-}
-
-async function Footer() {
-  const client = createClient();
-  const settings = await client.getSingle("settings");
-
-  return (
-    <footer className="bg-white px-6 py-10 text-slate-500">
-      <div className="mx-auto w-full max-w-5xl text-center text-xs">
-        <PrismicText field={settings.data.site_title} /> &mdash; © 2024 Hanna Margrét Jónsdóttir.
-      </div>
-    </footer>
   );
 }
