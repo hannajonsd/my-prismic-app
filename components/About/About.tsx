@@ -6,7 +6,7 @@ export function About({ text, picture }: { text: string, picture?: any}) {
     return (
         <div className={s.header}>
             <h1 className={s.title}>{text}</h1> 
-            {picture && <Image src={picture} alt={'image'} width={55} height={55} className={s.img} />}
+            {picture && <Image src={picture} alt={'image'} width={55} height={55}  quality={75} unoptimized={true} className={s.img} />}
         </div>
     );
 }

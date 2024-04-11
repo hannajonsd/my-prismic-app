@@ -6,7 +6,7 @@ export function Album({ text, picture }: { text: string, picture?: any}) {
     return (
         <div className={s.header}>
             <p className={s.text}>{text}</p>
-            {picture && <Image src={picture} alt={'image of album'} width={55} height={55} className={s.img} />}
+            {picture && <Image src={picture} alt={'image of album'} width={55} height={55} unoptimized={true} className={s.img} />}
         </div>
     );
 }
