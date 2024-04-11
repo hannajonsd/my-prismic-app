@@ -1,12 +1,12 @@
 .header {
-    background: rgb(69, 1, 69);
+    background: var(--primary-color);
     align-items: center;
     display: flex;
     flex-direction: column;
     overflow: auto; 
 
     .text {
-        color: white;
+        color: var(--text-color);
         font-size: 20px;
         padding: 5px;
         text-align: center;
@@ -27,8 +27,8 @@
 
 .home {
     font-size: 35px;
-    color: white;
-    background-color: rgb(69, 1, 69);
+    color: var(--text-color);
+    background-color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;

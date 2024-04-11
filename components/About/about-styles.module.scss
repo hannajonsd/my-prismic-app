@@ -1,6 +1,6 @@
 .header {
     font-size: 10px;
-    background: rgb(69, 1, 69);
+    background: var(--primary-color);
     padding: 5px;
     display: grid;
     justify-content: center;
@@ -9,13 +9,13 @@
 
     .text {
         font-size: 20px;
-        color: white;
+        color: var(--text-color);
     }
 
     .title {
         font-size: 20px;
         padding: 5px;
-        color: white;
+        color: var(--text-color);
         text-decoration: none;
     }
     
@@ -31,8 +31,8 @@
 
 .home {
     font-size: 35px;
-    color: white;
-    background-color: rgb(69, 1, 69);
+    color: var(--text-color);
+    background: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;

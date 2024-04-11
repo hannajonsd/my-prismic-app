@@ -1,6 +1,6 @@
 // src/app/layout.tsx
 
-import "./globals.css";
+import "./globals.scss";
 
 import { Metadata } from "next";
 import Link from "next/link";
