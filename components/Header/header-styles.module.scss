@@ -9,7 +9,7 @@
 
     .list {
         font-size: 15px;
-        color: rgb(236, 78, 230);
+        color: var(--link-color);
         text-decoration: underline;
         display: grid;
         justify-content: center;

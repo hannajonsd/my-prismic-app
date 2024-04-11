@@ -113,7 +113,7 @@ interface MenuDocumentData {
 export type MenuDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<MenuDocumentData>, "menu", Lang>;
 
-type PageDocumentDataSlicesSlice = HeroSlice | TextSlice;
+type PageDocumentDataSlicesSlice = TextAndLinkSlice | HeroSlice | TextSlice;
 
 /**
  * Content for Page documents
@@ -358,6 +358,61 @@ type TextSliceVariation = TextSliceDefault;
  */
 export type TextSlice = prismic.SharedSlice<"text", TextSliceVariation>;
 
+/**
+ * Primary content in *TextAndLink → Primary*
+ */
+export interface TextAndLinkSliceDefaultPrimary {
+  /**
+   * Text field in *TextAndLink → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_link.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * Link field in *TextAndLink → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_link.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Default variation for TextAndLink Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextAndLinkSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TextAndLinkSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TextAndLink*
+ */
+type TextAndLinkSliceVariation = TextAndLinkSliceDefault;
+
+/**
+ * TextAndLink Shared Slice
+ *
+ * - **API ID**: `text_and_link`
+ * - **Description**: TextAndLink
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextAndLinkSlice = prismic.SharedSlice<
+  "text_and_link",
+  TextAndLinkSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -390,6 +445,10 @@ declare module "@prismicio/client" {
       TextSliceDefaultPrimary,
       TextSliceVariation,
       TextSliceDefault,
+      TextAndLinkSlice,
+      TextAndLinkSliceDefaultPrimary,
+      TextAndLinkSliceVariation,
+      TextAndLinkSliceDefault,
     };
   }
 }

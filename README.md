@@ -1,3 +1,7 @@
+# Verkefni 5 - Vefforritun 2
+Hér er linkur á verkefnið sem er hýst hjá Vercel:
+https://my-prismic-app.vercel.app/
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
